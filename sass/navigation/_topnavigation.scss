@@ -1,0 +1,144 @@
+///////////////////////////
+// LOGO
+
+.logo{
+  height: 3.25rem;
+  margin-left: 2rem;
+}
+
+//////////////////////////////////////
+///SEARCH (form element)
+.search{
+
+  //nested flex box
+  display:flex;
+  align-items: center;
+  //justify-content: center;
+  //background-color: orangered;
+  flex: 0 0 40%;
+  // input box
+  &__input {
+    //inherit from parent
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+
+    background-color: var(--color-grey-ligh-2);
+    border: none;
+    // inside of the element
+    padding: .7rem 2rem;
+    border-radius: 100px;
+    width: 90%;
+    transition:  all .2s;
+    //svg icon is now in input field
+    margin-right: -3.5rem;
+
+    //increase the ize of the input field and make text darker
+    &:focus{
+      outline: none;
+      width: 100%;
+      background-color: var(--color-grey-ligh-3);
+    }
+    //change place holder text
+    &::-webkit-input-placeholder {
+      font-weight: 100;
+      color:var(--color-grey-light-4);
+    }
+  }
+
+  // when the input field is focus we want the search bar to be the same color
+  // sibling selector
+  &__input:focus + &__button{
+      background-color: var(--color-grey-ligh-3);
+  }
+  // the button container
+  &__button {
+    border: none;
+    background-color: var(--color-grey-ligh-2);
+    &:focus{
+      outline:none;
+    }
+    &:active{
+      transform: translateY(2px);
+    }
+  }
+  // svg search icon in the button
+  &__icon{
+    height: 2rem;
+    width: 2rem;
+    fill: var(--color-grey-dark-3);
+  }
+}
+
+
+
+///////////////////////////////////////
+// USER NAVIGATION
+.user-nav{
+  //background-color: greenyellow;
+  // align the nav bar
+  display:flex;
+  align-items: center;
+//  margin-right: 2rem;
+
+// from the header element
+  align-self: stretch;
+  //margin-right: 1rem;
+
+  // all direct children elements
+  & > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    // div takes up all of its container height
+      height: 100%;
+      // center the svg icons and image
+      display: flex;
+      align-items: center;
+  }
+   & > *:hover {
+    background-color: var(--color-grey-ligh-2);
+    }
+
+  //holds the svg and box
+  &__icon-box{
+    fill: var(--color-grey-dark-1);
+    //padding: 2rem;
+    position:relative;
+  }
+  // svg element
+  &__icon{
+    height: 2.25rem;
+    width: 2.25rem;
+  }
+  // span element
+  &__notification{
+    font-size: 1.2rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    position:absolute;
+    top: 1.5rem;
+    right: 1rem;
+    background-color: var(--color-primary);
+    color: #fff;
+    border-radius: 50%;
+  //center the text in the circle
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // container for the image
+  &__user{
+
+  }
+  // image of the user
+  &__user-photo{
+    height: 3.75rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+  // the text of the user name
+  &__user-name{
+
+  }
+}

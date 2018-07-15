@@ -1,0 +1,81 @@
+/*
+Working on the main content of or page
+*/
+.overview{
+  display:flex;
+  align-items: center;
+  border-bottom:  var(--line);
+  &__heading{
+    /*
+      Formating the h1 element
+    */
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem;
+  }
+  &__stars{
+    /*
+    flex:1;
+     margin-right: auto; puches everything to the right hand side
+    without occupying the space
+
+    display:flex;
+    places all the stars together
+    */
+    margin-right: auto;
+    display:flex;
+
+  }
+
+  &__icon-star,  &__icon-location{
+    /*
+        svg icon for the location and the stars
+        re-sizing the svg and changing its color
+    */
+    width: 1.75rem;
+    height: 1.75rem;
+    fill:var(--color-primary);
+  }
+  &__location{
+    font-size: 1.2rem;
+    display: flex;
+    align-items:  center;
+  }
+  &__icon-location{
+    /*
+      spacing between the svg and the button
+    */
+    margin-right: .5rem;
+  }
+
+  &__rating{
+    /*
+      container for the rating element
+      position the element in the correct place
+    */
+    background-color: var(--color-primary);
+    color: #fff;
+    margin-left: 3rem;
+    align-self: stretch;
+    padding: 0 2rem;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+    &-average{
+      font-size: 2.25rem;
+      font-weight: 300;
+      margin-bottom: -6px;
+    }
+    &-count{
+      font-size: .8rem;
+      text-transform: uppercase;
+    }
+  }
+
+}

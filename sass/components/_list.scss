@@ -1,0 +1,39 @@
+.list{
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: var(--line);
+  border-bottom: var(--line);
+
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    /*fix*/
+    flex:0 0 50%;
+    margin-bottom: .7rem;
+  }
+  &__item::before{
+  /*
+    using mask with svg images
+    to allow you to change the size and the
+    color of the image
+  */
+
+    content: "";
+    display: inline-block;
+    height: 1.2rem;
+    width:1.2rem;
+    //background-color: red;
+    margin-right: .7rem;
+    // background-image: url(../img/SVG/checkmark.svg);
+    // background-image:cover;
+
+    //mask
+    background-color: pink;
+    -webkit-mask-image: url(../img/SVG/checkmark.svg);
+    -webkit-mask-size: cover;
+    mask-image: url(../img/SVG/checkmark.svg);
+    mask-size: cover;
+  }
+}

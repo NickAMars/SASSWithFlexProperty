@@ -1,0 +1,12 @@
+
+/*
+contains text elements which need to be seperate
+*/
+.paragraph{
+  &:not(:last-of-type){
+    /*
+      applies to all the types with paragraph
+    */
+    margin-bottom: 2rem;
+  }
+}

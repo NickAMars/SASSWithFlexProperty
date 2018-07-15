@@ -1,0 +1,16 @@
+////////////////////////////////////////////
+// GALLARY
+.gallery{
+  display: flex;
+
+&__item{
+}
+&__photo{
+  width:100%;
+  // images should always be a block or a inline block
+  // if we dont  want that white space
+  display:block;
+}
+
+
+}
