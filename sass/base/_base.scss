@@ -33,6 +33,11 @@ Grey dark 3: #999
 
   --line: 1px solid var(--color-grey-ligh-2);
 }
+$bp-largest: 75em;   // 1200px
+$bp-large: 70.75em; // 1132px
+$bp-medium: 56.25em; // 900px
+$bp-small: 39.375em; // 630px
+$bp-smallest: 31.25em; //500px
 
 *,
 *::before,
@@ -44,6 +49,10 @@ box-sizing: inherit;
 html{
   box-sizing: border-box;
   font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-large){
+    font-size: 50%;
+  }
 }
 
 body{
