@@ -16,6 +16,7 @@
     flex:0 0 50%;
     margin-bottom: .7rem;
   }
+
   &__item::before{
   /*
     using mask with svg images
@@ -29,14 +30,19 @@
     width:1.2rem;
     //background-color: red;
     margin-right: .7rem;
-    // background-image: url(../img/SVG/checkmark.svg);
-    // background-image:cover;
+     background-image: url(../img/SVG/checkmark.svg);
+     background-image:cover;
 
-    //mask
-    background-color: pink;
-    -webkit-mask-image: url(../img/SVG/checkmark.svg);
-    -webkit-mask-size: cover;
-    mask-image: url(../img/SVG/checkmark.svg);
-    mask-size: cover;
+    @supports (-webkit-mask-image: url()) or (mask-image: url()){
+      /*
+          if we support mask image we should do this
+      */
+      background-color: var(--color-primary);
+      -webkit-mask-image: url(../img/SVG/checkmark.svg);
+      -webkit-mask-size: cover;
+      mask-image: url(../img/SVG/checkmark.svg);
+      mask-size: cover;
+      background-image: none;
+    }
   }
 }
